@@ -1,0 +1,13 @@
+<GridLayout xmlns="http://schemas.nativescript.org/tns.xsd" class="sector-card p-2" rows="auto, *" columns="*" tap="onSectorTap">
+    <GridLayout row="0" columns="*, auto" class="mb-2">
+        <Label col="0" text="{{ name }}" class="text-white text-lg font-bold" />
+        <Label col="1" text="{{ percentChange | number:'+2.2' }}%" class="{{ percentChange >= 0 ? 'text-green-500' : 'text-red-500' }}" />
+    </GridLayout>
+    <GridLayout row="1" rows="auto, auto, auto, auto" columns="*, *, *, *, *" class="stock-grid">
+        <Repeater items="{{ stocks }}" colSpan="5">
+            <Repeater.itemTemplate>
+                <ns:stock-tile />
+            </Repeater.itemTemplate>
+        </Repeater>
+    </GridLayout>
+</GridLayout>

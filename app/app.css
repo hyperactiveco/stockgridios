@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.stock-tile {
+    background-color: black;
+    border-radius: 4;
+    margin: 1;
+    padding: 4;
+}
+
+.stock-tile-up {
+    background-color: #22c55e;
+}
+
+.stock-tile-down {
+    background-color: #ef4444;
+}
+
+.sector-card {
+    background-color: #18181b;
+    border-radius: 8;
+    margin: 4;
+}
+
+.market-indices {
+    background-color: #000000;
+    padding: 8;
+}

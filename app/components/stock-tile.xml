@@ -1,0 +1,7 @@
+<GridLayout xmlns="http://schemas.nativescript.org/tns.xsd" class="stock-tile" rows="auto, auto" columns="*">
+    <Label row="0" text="{{ symbol }}" class="text-white font-bold text-center" />
+    <StackLayout row="1" class="text-center">
+        <Label text="{{ price | currency }}" class="text-white" />
+        <Label text="{{ change | number:'+2.2' }}" class="text-white" />
+    </StackLayout>
+</GridLayout>

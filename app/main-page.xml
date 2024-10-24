@@ -1,0 +1,45 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="bg-black">
+    <ActionBar class="bg-black">
+        <GridLayout columns="auto, *, auto">
+            <Image col="0" src="~/assets/logo.png" class="h-8 w-8" />
+            <GridLayout col="1" columns="auto, auto, auto" class="market-indices">
+                <Label col="0" text="DOW 10909 ↑ 2.83%" class="text-green-500 mr-4" />
+                <Label col="1" text="NASDAQ 8790 ↑ 3.25%" class="text-green-500 mr-4" />
+                <Label col="2" text="S&P500 3123 ↓ 3.25%" class="text-red-500" />
+            </GridLayout>
+            <Label col="2" text="≡" class="text-white text-2xl p-2" tap="onMenuTap" />
+        </GridLayout>
+    </ActionBar>
+
+    <GridLayout>
+        <ScrollView>
+            <StackLayout>
+                <Repeater items="{{ sectors }}">
+                    <Repeater.itemTemplate>
+                        <ns:sector-card />
+                    </Repeater.itemTemplate>
+                </StackLayout>
+            </ScrollView>
+
+            <BottomNavigation class="bg-black">
+                <TabStrip>
+                    <TabStripItem>
+                        <Label text="&#xf00a;" class="fas text-blue-500" />
+                        <Label text="Overview" class="text-blue-500" />
+                    </TabStripItem>
+                    <TabStripItem>
+                        <Label text="&#xf004;" class="far" />
+                        <Label text="Watchlist" />
+                    </TabStripItem>
+                    <TabStripItem>
+                        <Label text="&#xf002;" class="fas" />
+                        <Label text="Search" />
+                    </TabStripItem>
+                    <TabStripItem>
+                        <Label text="&#xf013;" class="fas" />
+                        <Label text="Settings" />
+                    </TabStripItem>
+                </TabStrip>
+            </BottomNavigation>
+        </GridLayout>
+</Page>
